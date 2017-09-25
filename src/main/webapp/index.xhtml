@@ -1,0 +1,16 @@
+<html xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>JSF</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h:inputText id="mensagem" value="#{helloController.mensagem}"></h:inputText>
+		<h:commandButton action="#{helloController.trocarMensagem}"
+			value="Click me"></h:commandButton>
+		<h:outputText id="outraMensagem"
+			value="#{helloController.outraMensagem}"></h:outputText>
+	</h:form>
+
+</h:body>
+</html>
