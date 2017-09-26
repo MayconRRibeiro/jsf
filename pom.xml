@@ -30,4 +30,8 @@
 	<build>
 		<finalName>JSF</finalName>
 	</build>
+<<<<<<< HEAD
 </project>
+=======
+</project>
+>>>>>>> e583a3c89173a4d2a3380b888064106be313590c
