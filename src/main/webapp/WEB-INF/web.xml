@@ -13,8 +13,4 @@
 		<servlet-name>FacesServlet</servlet-name>
 		<url-pattern>*.xhtml</url-pattern>
 	</servlet-mapping>
-<<<<<<< HEAD
 </web-app>
-=======
-</web-app>
->>>>>>> e583a3c89173a4d2a3380b888064106be313590c
