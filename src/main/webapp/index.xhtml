@@ -2,6 +2,12 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:a="http://xmlns.jcp.org/jsf/passthrough" lang="en">
 <h:head>
+	
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+	
+
+
 	<link rel="stylesheet"
 		href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
 		integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
@@ -55,19 +61,37 @@
 		<h2>----------------------------------------------------------------</h2>
 
 		<h3>Combo Box</h3>
+ 	 	<div class="form-group">
+			<h:outputLabel value="Estados do Sul do Brasil" />
+			<h:selectOneMenu value="#{textoController.uf}">
+				<f:selectItems value="#{textoController.listaUf}"/>
+			</h:selectOneMenu>
 
+		</div>
+		<div class="form-group">
+			<h:outputLabel value="Sexo"/>
+			<h:selectOneMenu value="#{textoController.sexo}">
+				<f:selectItems value="#{textoController.listaSexo}"/>
+			</h:selectOneMenu>
+			
+		</div>
+		
 		<h2>----------------------------------------------------------------</h2>
 
-		<h3>Radio Button</h3>
+		<div class="form-group">
 		<h:selectOneRadio value="#{textoController.cores}">
-
+			<f:selectItems value="#{textoController.listaSexo}"/>
 		</h:selectOneRadio>
-
+		</div>
+		
 		<h2>----------------------------------------------------------------</h2>
+		<div>
 		<h:inputText id="numero" value="#{textoController.numero}"></h:inputText>
-		<h:commandButton value="Formatar Numero"
-			action="#{textoController.formatarNumero}"></h:commandButton>
-		<h:outputText action="#{textoController.getNumero}"></h:outputText>
+		<h:commandButton value="Formatar Numero" action="#{textoController.formatarNumero}"></h:commandButton>
+		<h:outputLabel value="#{textoController.numeroFormatado}">
+		<f:convertNumber currencyCode="BRL" type="currency"/>
+		</h:outputLabel>
+		</div>
 	</h:form>
 
 

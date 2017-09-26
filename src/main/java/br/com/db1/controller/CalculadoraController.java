@@ -1,4 +1,4 @@
-package br.com.db1;
+package br.com.db1.controller;
 
 import javax.faces.bean.ManagedBean;
 
