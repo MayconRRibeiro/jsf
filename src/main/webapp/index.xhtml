@@ -1,0 +1,69 @@
+<html xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+</h:head>
+<h:body>
+	<h:form>
+		<h:inputText id="primeiroValor"
+			value="#{calculadoraController.primeiroValor}"
+			a:placeholder="Primeiro Valor"></h:inputText>
+		<h:inputText id="segundoValor"
+			value="#{calculadoraController.segundoValor}"
+			a:placeholder="Segundo Valor"></h:inputText>
+
+		<h:outputLabel value="#{calculadoraController.resultado}"></h:outputLabel>
+
+		<h:commandButton value="+" action="#{calculadoraController.somar}"></h:commandButton>
+		<h:commandButton value="-" action="#{calculadoraController.subtrair}"></h:commandButton>
+		<h:commandButton value="*"
+			action="#{calculadoraController.multiplicar}"></h:commandButton>
+		<h:commandButton value="/" action="#{calculadoraController.dividir}"></h:commandButton>
+
+		<h2>----------------------------------------------------------------</h2>
+
+		<h:inputText id="texto" value="#{textoController.texto}"></h:inputText>
+		<h:commandButton value="Texto em Minuscula"
+			action="#{textoController.apresentarTextoEmMinuscula}"></h:commandButton>
+		<h:commandButton value="Texto em Maiuscula"
+			action="#{textoController.apresentarTextoEmMaiuscula}"></h:commandButton>
+
+		<h2>----------------------------------------------------------------</h2>
+
+		<h3>Check Box</h3>
+		<h:outputText value="Things to do"></h:outputText>
+		<br />
+		<h:inputText value="Salvar a cidade"></h:inputText>
+		<h:selectBooleanCheckbox></h:selectBooleanCheckbox>
+		<br />
+		<h:inputText value="Estudar JavaEE"></h:inputText>
+		<h:selectBooleanCheckbox></h:selectBooleanCheckbox>
+		<br />
+		<h:inputText value="Caminhar"></h:inputText>
+		<h:selectBooleanCheckbox></h:selectBooleanCheckbox>
+		<br />
+		<h:inputText value="Estudar JSF"></h:inputText>
+		<h:selectBooleanCheckbox></h:selectBooleanCheckbox>
+		<br />
+		<h:inputText value="Beber agua"></h:inputText>
+		<h:selectBooleanCheckbox></h:selectBooleanCheckbox>
+
+		<h2>----------------------------------------------------------------</h2>
+
+		<h3>Combo Box</h3>
+
+		<h2>----------------------------------------------------------------</h2>
+
+		<h3>Radio Button</h3>
+		<h:selectOneRadio value="#{textoController.cores}">
+			<f:selectItems value="#{textoController.corValue}" />
+		</h:selectOneRadio>
+
+		<h2>----------------------------------------------------------------</h2>
+		<h:inputText id="numero" value="#{textoController.numero}"></h:inputText>
+		<h:commandButton value="Formatar Numero"
+			action="#{textoController.formatarNumero}"></h:commandButton>
+		<h:outputText action="#{textoController.getNumero}"></h:outputText>
+	</h:form>
+</h:body>
+</html>
